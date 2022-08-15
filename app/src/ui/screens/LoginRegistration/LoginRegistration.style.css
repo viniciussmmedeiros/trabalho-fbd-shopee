@@ -1,0 +1,52 @@
+.home-screen-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.shopee-logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f94e30;
+  width: 640px;
+  border-radius: 12px;
+}
+
+.shopee-logo-wrapper h1 {
+  font-size: 4rem;
+  color: #efefef;
+}
+
+.buttons-wrapper {
+  display: flex;
+  gap: 120px;
+}
+
+.buttons-wrapper a {
+  background-color: #fb5533;
+  color: #ffffff;
+  width: 180px;
+  height: 60px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin: 200px 0 40px 0;
+}
+
+.buttons-wrapper a:hover {
+  cursor: pointer;
+  background-color: #ff694b;
+}
+
+.continue-without-registration-button {
+  font-size: 1.2rem;
+}
+
+.continue-without-registration-button:hover {
+  color: #5c5c5c;
+}

@@ -1,0 +1,25 @@
+.simplified-header-container {
+  padding: 0 80px;
+}
+
+.simplified-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.simplified-header-logo-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #ee4d2d;
+  padding: 14px 0;
+}
+
+.simplified-header-logo-wrapper img {
+  width: 80px;
+}
+
+.simplified-header-wrapper p {
+  color: #ee4d2d;
+}

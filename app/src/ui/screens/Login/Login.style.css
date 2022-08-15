@@ -1,0 +1,97 @@
+.login-screen-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form-wrapper {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ee4d2d;
+  padding: 40px;
+  /* height: 50%; */
+  height: 460px;
+}
+
+.login-form-logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.4rem;
+  color: #ffffff;
+}
+
+.login-form-logo-wrapper h2 {
+  margin: 0;
+}
+
+.login-form-wrapper form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.login-form-wrapper form span {
+  font-weight: 300;
+}
+
+.login-form-wrapper form input {
+  width: 240px;
+  height: 32px;
+  margin-bottom: 20px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper button {
+  position: absolute;
+  right: 0;
+  top: 4.4%;
+}
+
+.password-toggle-visibility-button {
+  background-color: transparent;
+  border: none;
+}
+
+.password-toggle-visibility-button img {
+  width: 30px;
+}
+
+.password-toggle-visibility-button img:hover {
+  cursor: pointer;
+}
+
+.login-registration-button {
+  color: #ff694b;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.login-registration-button:hover {
+  color: #ff856d;
+}
+
+.login-button {
+  width: 140px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 20px;
+  background-color: #ff694b;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  transition: 0.2s;
+}
+
+.login-button:hover {
+  background-color: #ff856d;
+  cursor: pointer;
+}
