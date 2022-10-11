@@ -11,10 +11,10 @@ export const LoginRegistrationScreen = () => {
       </div>
       <div className="buttons-wrapper">
         <Link to="/login">Logar</Link>
-        <Link to="/registration">Registrar</Link>
+        <Link to="/cadastro">Registrar</Link>
       </div>
-      <Link to="/public/home" className="continue-without-registration-button">
-        Continuar sem registro
+      <Link to="/admin/home" className="continue-without-registration-button">
+        Admin
       </Link>
     </section>
   );

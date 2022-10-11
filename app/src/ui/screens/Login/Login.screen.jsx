@@ -4,17 +4,48 @@ import { Link, useNavigate } from "react-router-dom";
 import ShoppeLogo248 from "../../../assets/shopee-icon-240.svg";
 import PasswordHidden from "../../../assets/eye-closed-icon.svg";
 import PasswordVisible from "../../../assets/eye-open-icon.svg";
-import { SimplifiedHeader, Footer } from "../../components";
+import { SimplifiedHeader } from "../../components";
+import { CUSTOMER_LOGIN, SELLER_LOGIN } from "../../../constants";
+import { useSellerApi } from "../../../hooks/api";
+import { useToastService } from "../../../hooks/service";
+import { useCustomerApi } from "../../../hooks/api/use-customer-api.hook";
+import { useUsuarioGlobal } from "../../../context";
 
 export const LoginScreen = () => {
   const navigate = useNavigate();
+  const sellerApi = useSellerApi();
+  const [, setUsuarioGlobal] = useUsuarioGlobal();
+  const customerApi = useCustomerApi();
+  const { setErrorToast } = useToastService();
   const [isPasswordHidden, setIsPasswordHidden] = useState(true);
+  const [loginChoice, setLoginChoice] = useState(CUSTOMER_LOGIN);
+  const [loginData, setLoginData] = useState({ email: null, senha: null });
 
-  const handleRegistration = (event) => {
+  const handleLogin = async (event) => {
     event.preventDefault();
 
-    alert("parabéns, você logou!");
-    navigate("/user/home");
+    try {
+      if (loginChoice === CUSTOMER_LOGIN) {
+        const loginResponse = await customerApi.login(loginData);
+        setUsuarioGlobal(loginResponse[0]);
+        navigate("/cliente/home");
+      } else if (loginChoice === SELLER_LOGIN) {
+        const loginResponse = await sellerApi.login(loginData);
+        setUsuarioGlobal(loginResponse[0]);
+        navigate("/vendedor/home");
+      }
+    } catch (error) {
+      setErrorToast(error);
+    }
+  };
+
+  const handleInput = (event) => {
+    const { name, value } = event.target;
+
+    setLoginData((previousValues) => ({
+      ...previousValues,
+      [name]: value,
+    }));
   };
 
   return (
@@ -25,12 +56,34 @@ export const LoginScreen = () => {
           <img src={ShoppeLogo248} alt="Logo" />
           <h2>ShopeeFBD</h2>
         </div>
-        <form onSubmit={handleRegistration}>
+        <form onSubmit={handleLogin}>
+          <div className="login-choice-buttons">
+            <span
+              className={`${loginChoice === CUSTOMER_LOGIN && "selected"}`}
+              onClick={() => setLoginChoice(CUSTOMER_LOGIN)}
+            >
+              Cliente
+            </span>
+            <span
+              className={`${loginChoice === SELLER_LOGIN && "selected"}`}
+              onClick={() => setLoginChoice(SELLER_LOGIN)}
+            >
+              Vendedor
+            </span>
+          </div>
           <label htmlFor="">Email</label>
-          <input type="text" />
+          <input
+            name="email"
+            type="text"
+            onChange={(event) => handleInput(event)}
+          />
           <label htmlFor="">Senha</label>
           <div className="password-wrapper">
-            <input type={isPasswordHidden ? "password" : "text"} />
+            <input
+              name="senha"
+              onChange={(event) => handleInput(event)}
+              type={isPasswordHidden ? "password" : "text"}
+            />
             <button
               type="button"
               onClick={() => setIsPasswordHidden(!isPasswordHidden)}
@@ -46,14 +99,13 @@ export const LoginScreen = () => {
             Logar
           </button>
           <span>
-            Novo na ShopeeFBD ?{" "}
+            Novo na ShopeeFBD ?
             <Link to="/registration" className="login-registration-button">
               Cadastrar
             </Link>
           </span>
         </form>
       </div>
-      {/* <Footer /> */}
     </section>
   );
 };

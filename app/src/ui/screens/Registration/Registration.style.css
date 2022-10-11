@@ -1,0 +1,63 @@
+.registration-screen-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form-logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.4rem;
+  color: #ffffff;
+}
+
+.login-form-logo-wrapper h2 {
+  margin: 0;
+}
+
+.registration-wrapper {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ee4d2d;
+  padding: 40px;
+  height: 460px;
+}
+
+.registration-wrapper form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.registration-wrapper form span {
+  font-weight: 300;
+}
+
+.registration-wrapper form input {
+  width: 240px;
+  height: 32px;
+  margin-bottom: 20px;
+}
+
+.registration-button {
+  width: 140px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 20px;
+  background-color: #ff694b;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  transition: 0.2s;
+}
+
+.registration-button:hover {
+  background-color: #ff856d;
+  cursor: pointer;
+}

@@ -1,0 +1,52 @@
+.header-wrapper {
+  background-color: #fb5533;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo-wrapper img {
+  width: 64px;
+}
+
+.header-logo-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #fafafa;
+}
+
+.header-search-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header-search-wrapper input {
+  width: 28rem;
+  height: 2rem;
+  font-size: 1.6rem;
+}
+
+.header-search-wrapper button,
+.shopping-cart-button,
+.user-button {
+  border: none;
+  background-color: transparent;
+}
+
+.header-search-wrapper button > img,
+.shopping-cart-button img,
+.user-button {
+  width: 26px;
+  cursor: pointer;
+}
+
+.user-btns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.user-button {
+  width: 1.875rem;
+}

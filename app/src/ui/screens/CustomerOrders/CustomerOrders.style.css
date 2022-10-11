@@ -1,0 +1,86 @@
+.customer-cart-wrapper .simplified-header-wrapper {
+  background-color: #e66c54;
+}
+
+.customer-cart-wrapper .simplified-header-logo-wrapper {
+  color: #fafafa;
+}
+
+.customer-cart-wrapper .simplified-header-wrapper p {
+  color: #fafafa;
+}
+
+.cart-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.cart-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e66c54;
+  width: 70vw;
+  padding: 1rem;
+}
+
+.cart-product img {
+  width: 120px;
+}
+
+.cart-details {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.6rem;
+}
+
+.cart-content button {
+  background-color: #fb5533;
+  color: #ffffff;
+  width: 180px;
+  height: 60px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: none;
+}
+
+.cart-content button:hover {
+  cursor: pointer;
+  background-color: #ff694b;
+}
+
+.address-card {
+  gap: 0.4rem;
+}
+
+.address-card,
+.card-card,
+.shipping-card {
+  transition: 0.2s;
+  padding: 0.1rem;
+  font-size: 1.2rem;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.address-card.active-true,
+.card-card.active-true,
+.shipping-card.active-true {
+  background-color: #e66c54;
+}
+
+.address-card:hover,
+.card-card:hover,
+.shipping-card:hover {
+  cursor: pointer;
+  background-color: #e66c54;
+}

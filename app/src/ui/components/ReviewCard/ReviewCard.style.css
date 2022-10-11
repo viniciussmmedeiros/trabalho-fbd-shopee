@@ -1,0 +1,11 @@
+.review-card-wrapper {
+  border: 1px solid #ff694b;
+  padding: 1rem;
+  width: 70vw;
+  display: flex;
+  gap: 1rem;
+}
+
+.review-card-wrapper img {
+  width: 140px;
+}

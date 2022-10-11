@@ -1,0 +1,70 @@
+.seller-home-wrapper .simplified-header-wrapper {
+  background-color: #e66c54;
+}
+
+.seller-home-wrapper .simplified-header-logo-wrapper {
+  color: #fafafa;
+}
+
+.seller-home-wrapper .simplified-header-wrapper p {
+  color: #fafafa;
+}
+
+.seller-home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.seller-metrics {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e66c54;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.seller-metrics button {
+  background-color: #fb5533;
+  color: #ffffff;
+  width: 180px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  justify-content: center;
+  border-radius: 12px;
+  border: none;
+  font-weight: bolder;
+  margin-top: 1rem;
+  transition: 0.2s;
+}
+
+.seller-metrics button:hover {
+  cursor: pointer;
+  background-color: #ff694b;
+}
+
+.seller-metrics-result {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e66c54;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.seller-orders {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.seller-order-card {
+  border: 1px solid #e66c54;
+  padding: 1rem;
+}
+
+.seller-order-card img {
+  width: 120px;
+}

@@ -1,0 +1,41 @@
+.products-wrapper {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.products-previous-page-button,
+.products-next-page-button {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  border: solid #fb5533;
+  border-width: 0 2.18rem 2.18rem 0;
+  background: none;
+  padding: 2.18rem;
+  display: block;
+}
+
+.products-previous-page-button:hover.products-disabled-false,
+.products-next-page-button:hover.products-disabled-false {
+  cursor: pointer;
+  border: solid #fb5533;
+  border-width: 0 2.25rem 2.25rem 0;
+}
+
+.products-previous-page-button {
+  left: 2.18rem;
+  transform: rotate(135deg);
+}
+
+.products-next-page-button {
+  right: 2.18rem;
+  transform: rotate(-45deg);
+}
+
+.products-disabled-true {
+  border: solid grey;
+  border-width: 0 2.18rem 2.18rem 0;
+}

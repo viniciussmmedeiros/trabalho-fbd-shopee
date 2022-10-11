@@ -1,0 +1,1 @@
+export const SIZE_PAGINATION = { CATEGORIES: 4, PRODUCTS: 8 };

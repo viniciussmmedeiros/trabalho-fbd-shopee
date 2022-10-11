@@ -1,0 +1,18 @@
+.seller-products-wrapper .simplified-header-wrapper {
+  background-color: #e66c54;
+}
+
+.seller-products-wrapper .simplified-header-logo-wrapper {
+  color: #fafafa;
+}
+
+.seller-products-wrapper .simplified-header-wrapper p {
+  color: #fafafa;
+}
+
+.seller-products-info {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

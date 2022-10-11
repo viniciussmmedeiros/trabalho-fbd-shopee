@@ -1,0 +1,41 @@
+.admin-screen-wrapper .simplified-header-wrapper {
+  background-color: #e66c54;
+}
+
+.admin-screen-wrapper .simplified-header-logo-wrapper {
+  color: #fafafa;
+}
+
+.admin-screen-wrapper .simplified-header-wrapper p {
+  color: #fafafa;
+}
+
+.admin-screen-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.admin-no-sells-sellers,
+.admin-customers-no-order,
+.admin-customers-incomplete {
+  font-size: 1.2rem;
+  width: 70vw;
+}
+
+.no-sells-content,
+.no-order-content,
+.incomplete-content {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.seller-no-sell-card,
+.customer-no-order-card,
+.customer-incomplete-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e66c54;
+  margin-top: 1rem;
+}
